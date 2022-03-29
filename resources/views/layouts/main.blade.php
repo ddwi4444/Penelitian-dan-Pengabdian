@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="shortcut icon" href="/img/Logo.png">
         <title>Penelitian - {{$title}}</title>
 
         <!-- Fonts -->
@@ -22,6 +23,9 @@
 
         <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <!-- Animation -->
         <link
@@ -49,7 +53,7 @@
     <body>
 
     <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top m-auto">
         <!-- Container wrapper -->
         <div class="container">
           <!-- Navbar brand -->
@@ -112,7 +116,7 @@
 
             <!-- Tampilan Navbar Sebelum Login -->
             @else
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center animate__animated animate__zoomIn">
             <a href="/login"><button type="button" class="btn btn-link px-3 me-2">
               <i class="bi bi-box-arrow-right"></i> Sign In
               </button></a>
@@ -147,6 +151,12 @@
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"
     ></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

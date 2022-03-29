@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\KontenController;
+
+use App\Models\Konten;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +21,7 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('home',[
-        "title" => "Home"
+        "title" => "LPPM"
     ]);
 });
 
@@ -27,7 +29,9 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard', [KontenController::class, 'index'])->middleware('auth');
 
 Route::get('/profil', [UserController::class, 'index'])->middleware('auth');
+
+Route::resource('kontens', KontenController::class)->middleware('auth');
 

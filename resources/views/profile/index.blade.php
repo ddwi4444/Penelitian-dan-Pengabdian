@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="container emp-profile">
+<div class="container emp-profile animate__animated animate__fadeIn">
             <form method="post">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img class="animate__animated animate__fadeIn" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt=""Photo Profil>
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt=""Photo Profil>
                         </div>
                     </div>
                     <div class="col-md-6">
